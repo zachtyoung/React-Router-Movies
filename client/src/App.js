@@ -12,15 +12,12 @@ const App = () => {
   };
 
   return (
-    <Router>
     <div>
-      <SavedList list={savedList} />
-
+      <SavedList key={savedList} list={savedList} />
       <Route exact path='/' component={MovieList} />
       <Route path='/movies/:id' component={Movie} />
 
     </div>
-    </Router>
   );
 };
 
